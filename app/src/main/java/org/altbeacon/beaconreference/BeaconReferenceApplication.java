@@ -45,6 +45,11 @@ public class BeaconReferenceApplication extends Application implements Bootstrap
         //beaconManager.getBeaconParsers().add(new BeaconParser().
         //        setBeaconLayout("m:2-3=beac,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
 
+        beaconManager.getBeaconParsers().clear();
+        beaconManager.getBeaconParsers().add(
+                //new BeaconParser().setBeaconLayout("m:0-3=4c000215,i:4-19,i:20-21,i:22-23,p:24-24"));
+                new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"));
+
         // Uncomment the code below to use a foreground service to scan for beacons. This unlocks
         // the ability to continually scan for long periods of time in the background on Andorid 8+
         // in exchange for showing an icon at the top of the screen and a always-on notification to
